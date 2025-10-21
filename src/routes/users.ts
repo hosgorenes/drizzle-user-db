@@ -1,11 +1,9 @@
-// ...existing code...
 import { FastifyInstance } from "fastify";
 import { db } from "../db/client";
 import { users, usersEmails } from "../db/schema";
 import { z } from "zod";
 import { eq } from "drizzle-orm";
 
-// tüm user-related endpoint’ler burada
 export default async function usersRoutes(app: FastifyInstance) {
 
   const paginationSchema = z.object({
