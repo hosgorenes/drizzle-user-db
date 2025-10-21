@@ -12,7 +12,7 @@ export const users = sqliteTable("users", {
     createdAt: text("created_at")
         .default(sql`CURRENT_TIMESTAMP`)
         .notNull(),
-    updatedAt: text("updated_at"),
+    updatedAt: text("updated_at").notNull().default(sql`CURRENT_TIMESTAMP`)
 });
 
 export const usersEmails = sqliteTable("users_emails", {

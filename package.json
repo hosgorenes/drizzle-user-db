@@ -7,6 +7,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "drizzle:generate": "drizzle-kit generate --config=drizzle-config.ts",
+    "drizzle:push": "drizzle-kit push --config=drizzle-config.ts",
     "drizzle:studio": "drizzle-kit studio --config=drizzle-config.ts",
     "dev": "tsx src/server.ts",
     "seed": "tsx src/seed.ts"
@@ -19,6 +20,7 @@
     "better-sqlite3": "^12.4.1",
     "drizzle-orm": "^0.44.6",
     "fastify": "^5.6.1",
+    "winston": "^3.18.3",
     "zod": "^4.1.12"
   },
   "devDependencies": {
