@@ -1,0 +1,31 @@
+[2025-10-22 11:50:40] [32minfo[39m: 🚀 Server running at http://[::1]:3000
+[2025-10-22 11:50:52] [31merror[39m: GET /users - Error fetching users
+[2025-10-22 11:58:39] [32minfo[39m: 🚀 Server running at http://[::1]:3000
+[2025-10-22 11:58:47] [32minfo[39m: GET /users - Successfully fetched 0 users
+[2025-10-22 11:59:14] [32minfo[39m: GET /users - Successfully fetched 0 users
+[2025-10-22 11:59:16] [32minfo[39m: GET /users - Successfully fetched 0 users
+[2025-10-22 11:59:16] [32minfo[39m: GET /users - Successfully fetched 0 users
+[2025-10-22 11:59:17] [32minfo[39m: GET /users - Successfully fetched 0 users
+[2025-10-22 12:00:46] [32minfo[39m: POST /users - Successfully created user with ID: o2zszkcnkyg62jhj7x1h2fcw
+[2025-10-22 12:01:01] [32minfo[39m: POST /users - Successfully created user with ID: fsyj9cfvg2u2tee0oyjaefdq
+[2025-10-22 12:01:16] [33mwarn[39m: POST /users - Validation error
+[2025-10-22 12:01:55] [32minfo[39m: POST /users - Successfully created user with ID: zzjlxaiv2ptkf5dhekdo9wl0
+[2025-10-22 12:02:02] [32minfo[39m: GET /users - Successfully fetched 3 users
+[2025-10-22 12:02:59] [31merror[39m: Server failed to start: listen EADDRINUSE: address already in use ::1:3000
+[2025-10-22 12:04:05] [32minfo[39m: 🚀 Server running at http://[::1]:3000
+[2025-10-22 12:04:15] [32minfo[39m: GET /users - Successfully fetched 3 users
+[2025-10-22 12:04:15] [32minfo[39m: GET /users - Successfully fetched 3 users
+[2025-10-22 12:04:21] [32minfo[39m: GET /users/:id - Successfully fetched user with 1 emails
+[2025-10-22 12:05:17] [32minfo[39m: PUT /users/:id - Successfully updated user with ID: o2zszkcnkyg62jhj7x1h2fcw
+[2025-10-22 12:05:21] [32minfo[39m: GET /users/:id - Successfully fetched user with 2 emails
+[2025-10-22 12:05:25] [32minfo[39m: GET /users - Successfully fetched 3 users
+[2025-10-22 12:52:44] [31merror[39m: Server failed to start: listen EADDRINUSE: address already in use ::1:3000
+[2025-10-22 12:52:54] [32minfo[39m: GET /users - Successfully fetched 3 users
+[2025-10-22 12:53:14] [32minfo[39m: GET /users/:id - Successfully fetched user with 2 emails
+[2025-10-22 12:53:31] [32minfo[39m: GET /users/:id - Successfully fetched user with 2 emails
+[2025-10-22 13:19:15] [32minfo[39m: POST /users - Successfully created user with ID: dkn2qjsch4k1vmwb8omkmf0k
+[2025-10-22 13:19:42] [32minfo[39m: GET /users/:id - Successfully fetched user with 2 emails
+[2025-10-22 13:19:44] [32minfo[39m: GET /users - Successfully fetched 4 users
+[2025-10-22 13:19:51] [32minfo[39m: PUT /users/:id - Successfully updated user with ID: dkn2qjsch4k1vmwb8omkmf0k
+[2025-10-22 13:19:54] [32minfo[39m: GET /users - Successfully fetched 4 users
+[2025-10-22 13:20:18] [32minfo[39m: DELETE /users/:id - Successfully deleted user with ID: dkn2qjsch4k1vmwb8omkmf0k
