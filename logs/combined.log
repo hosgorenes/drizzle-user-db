@@ -29,3 +29,99 @@
 [2025-10-22 13:19:51] [32minfo[39m: PUT /users/:id - Successfully updated user with ID: dkn2qjsch4k1vmwb8omkmf0k
 [2025-10-22 13:19:54] [32minfo[39m: GET /users - Successfully fetched 4 users
 [2025-10-22 13:20:18] [32minfo[39m: DELETE /users/:id - Successfully deleted user with ID: dkn2qjsch4k1vmwb8omkmf0k
+[2025-10-24 00:12:36] [32minfo[39m: 🚀 Server running at http://[::1]:3000
+[2025-10-24 00:37:50] [32minfo[39m: 🚀 Server running at http://[::1]:3000
+[2025-10-24 00:42:57] [32minfo[39m: 🚀 Server running at http://[::1]:3000
+[2025-10-24 00:47:52] [32minfo[39m: 🚀 Server running at http://[::1]:3000
+[2025-10-24 00:56:36] [32minfo[39m: 🚀 Server running at http://[::1]:3000
+[2025-10-24 00:56:40] [31merror[39m: GET /users - Error fetching users
+[2025-10-24 00:56:54] [31merror[39m: GET /users - Error fetching users
+[2025-10-24 00:57:27] [31merror[39m: GET /users - Error fetching users
+[2025-10-24 00:57:46] [32minfo[39m: 🚀 Server running at http://[::1]:3000
+[2025-10-24 00:58:12] [31merror[39m: GET /users - Error fetching users
+[2025-10-24 01:00:15] [31merror[39m: GET /users - Error fetching users
+[2025-10-24 01:01:32] [32minfo[39m: 🚀 Server running at http://[::1]:3000
+[2025-10-24 01:18:20] [32minfo[39m: 🚀 Server running at http://[::1]:3000
+[2025-10-24 01:31:50] [32minfo[39m: 🚀 Server running at http://[::1]:3000
+[2025-10-24 01:34:46] [32minfo[39m: 🚀 Server running at http://[::1]:3000
+[2025-10-24 01:40:13] [32minfo[39m: 🚀 Server running at http://[::1]:3000
+[2025-10-24 01:42:36] [32minfo[39m: 🚀 Server running at http://[::1]:3000
+[2025-10-24 01:44:23] [32minfo[39m: 🚀 Server running at http://[::1]:3000
+[2025-10-24 01:47:38] [32minfo[39m: 🚀 Server running at http://[::1]:3000
+[2025-10-24 14:58:14] [32minfo[39m: 🚀 Server running at http://[::1]:3000
+[2025-10-24 15:26:40] [33mwarn[39m: GET /users/:id - User not found with ID: 1
+[2025-10-24 15:38:29] [32minfo[39m: 🚀 Server running at http://[::1]:3000
+[2025-10-24 15:39:34] [31merror[39m: Server failed to start: listen EADDRINUSE: address already in use ::1:3000
+[2025-10-24 15:39:45] [32minfo[39m: 🚀 Server running at http://[::1]:3000
+[2025-10-24 15:47:56] [33mwarn[39m: PUT /users/:id - Validation error
+[2025-10-24 15:48:47] [31merror[39m: PUT /users/:id - Error updating user
+[2025-10-24 15:51:47] [33mwarn[39m: PUT /users/:id - User not found with ID: o2zszkcnkyg62jh7x1h2fcw
+[2025-10-24 15:51:50] [31merror[39m: PUT /users/:id - Error updating user
+[2025-10-24 15:51:52] [31merror[39m: PUT /users/:id - Error updating user
+[2025-10-24 16:03:11] [32minfo[39m: POST /users - Successfully created user with ID: vlzt542pkhriwwutg10nj7kc
+[2025-10-24 16:03:35] [32minfo[39m: PUT /users/:id - Successfully updated user with ID: vlzt542pkhriwwutg10nj7kc
+[2025-10-24 19:31:08] [32minfo[39m: 🚀 Server running at http://[::1]:3000
+[2025-10-24 19:40:58] [32minfo[39m: 🚀 Server running at http://[::1]:3000
+[2025-10-24 19:47:58] [32minfo[39m: 🚀 Server running at http://[::1]:3000
+[2025-10-24 19:54:58] [31merror[39m: Server failed to start: listen EADDRINUSE: address already in use ::1:3000
+[2025-10-24 19:55:09] [32minfo[39m: 🚀 Server running at http://[::1]:3000
+[2025-10-24 19:58:46] [32minfo[39m: 🚀 Server running at http://[::1]:3000
+[2025-10-24 20:04:48] [31merror[39m: PUT /users/:id - Error updating user
+[2025-10-24 20:04:50] [31merror[39m: PUT /users/:id - Error updating user
+[2025-10-24 20:06:18] [31merror[39m: PUT /users/:id - Error updating user
+[2025-10-24 20:42:15] [32minfo[39m: 🚀 Server running at http://[::1]:3000
+[2025-10-24 20:43:27] [31merror[39m: DELETE /users/:id - Error deleting user
+[2025-10-24 20:52:45] [32minfo[39m: 🚀 Server running at http://[::1]:3000
+[2025-10-24 20:52:54] [31merror[39m: DELETE /users/:id - Error deleting user
+[2025-10-24 20:54:13] [31merror[39m: DELETE /users/:id - Error deleting user
+[2025-10-24 20:54:33] [32minfo[39m: 🚀 Server running at http://[::1]:3000
+[2025-10-24 20:54:36] [31merror[39m: DELETE /users/:id - Error deleting user
+[2025-10-24 20:55:35] [32minfo[39m: 🚀 Server running at http://[::1]:3000
+[2025-10-24 20:55:41] [31merror[39m: DELETE /users/:id - Error deleting user
+[2025-10-24 20:56:42] [31merror[39m: DELETE /users/:id - Error deleting user
+[2025-10-24 20:57:19] [31merror[39m: DELETE /users/:id - Error deleting user
+[2025-10-24 20:57:33] [32minfo[39m: 🚀 Server running at http://[::1]:3000
+[2025-10-24 20:57:37] [31merror[39m: DELETE /users/:id - Error deleting user
+[2025-10-24 21:01:06] [32minfo[39m: 🚀 Server running at http://[::1]:3000
+[2025-10-24 21:01:08] [31merror[39m: DELETE /users/:id - Error deleting user
+[2025-10-24 21:01:34] [32minfo[39m: POST /users - Successfully created user with ID: qmidbyf597c4w13nh5xtb2nv
+[2025-10-24 21:01:44] [33mwarn[39m: GET /users/:id - User not found with ID: o2zszkcnkyg62jhj7x1h2fcw
+[2025-10-24 21:03:48] [31merror[39m: PUT /users/:id - Error updating user
+[2025-10-24 21:11:19] [32minfo[39m: 🚀 Server running at http://[::1]:3000
+[2025-10-24 21:12:11] [31merror[39m: PUT /users/:id - Error updating user
+[2025-10-24 21:14:22] [32minfo[39m: POST /users - Successfully created user with ID: w32malipsv00enfl2kxisxna
+[2025-10-24 21:14:31] [33mwarn[39m: GET /users/:id - User not found with ID: fsyj9cfvg2u2tee0oyjaefdq
+[2025-10-24 21:24:53] [32minfo[39m: 🚀 Server running at http://[::1]:3000
+[2025-10-24 21:25:21] [31merror[39m: DELETE /users/:id - Error deleting user
+[2025-10-24 21:26:21] [32minfo[39m: 🚀 Server running at http://[::1]:3000
+[2025-10-24 21:27:06] [32minfo[39m: 🚀 Server running at http://[::1]:3000
+[2025-10-24 21:27:06] [31merror[39m: GET /users - Error fetching users
+[2025-10-24 21:27:30] [31merror[39m: GET /users - Error fetching users
+[2025-10-24 21:27:45] [31merror[39m: GET /users - Error fetching users
+[2025-10-24 21:28:03] [31merror[39m: GET /users - Error fetching users
+[2025-10-24 21:28:19] [32minfo[39m: 🚀 Server running at http://[::1]:3000
+[2025-10-24 21:28:20] [31merror[39m: GET /users - Error fetching users
+[2025-10-24 21:36:26] [32minfo[39m: 🚀 Server running at http://[::1]:3000
+[2025-10-24 21:40:10] [31merror[39m: PUT /users/:id - Error updating user
+[2025-10-24 21:40:54] [32minfo[39m: 🚀 Server running at http://[::1]:3000
+[2025-10-24 21:41:43] [32minfo[39m: 🚀 Server running at http://[::1]:3000
+[2025-10-24 21:41:43] [32minfo[39m: PUT /users/:id - Successfully updated user with ID: qmidbyf597c4w13nh5xtb2nv
+[2025-10-24 21:41:51] [31merror[39m: DELETE /users/:id - Error deleting user
+[2025-10-24 21:42:04] [31merror[39m: DELETE /users/:id - Error deleting user
+[2025-10-24 21:43:02] [32minfo[39m: 🚀 Server running at http://[::1]:3000
+[2025-10-24 21:43:03] [31merror[39m: DELETE /users/:id - Error deleting user
+[2025-10-24 21:43:19] [32minfo[39m: 🚀 Server running at http://[::1]:3000
+[2025-10-24 21:44:11] [32minfo[39m: 🚀 Server running at http://[::1]:3000
+[2025-10-24 21:44:48] [32minfo[39m: 🚀 Server running at http://[::1]:3000
+[2025-10-24 21:44:48] [32minfo[39m: DELETE /users/:id - Successfully deleted user with ID: qmidbyf597c4w13nh5xtb2nv
+[2025-10-24 21:45:59] [32minfo[39m: POST /users - Successfully created user with ID: i0hvqql1020jg49oukrz5oi3
+[2025-10-24 21:46:06] [32minfo[39m: DELETE /users/:id - Successfully deleted user with ID: i0hvqql1020jg49oukrz5oi3
+[2025-10-24 21:46:23] [32minfo[39m: 🚀 Server running at http://[::1]:3000
+[2025-10-24 21:46:26] [32minfo[39m: POST /users - Successfully created user with ID: w3p462c0v1v8qaixoy3v82j2
+[2025-10-24 21:46:42] [32minfo[39m: DELETE /users/:id - Successfully deleted user with ID: w3p462c0v1v8qaixoy3v82j2
+[2025-10-24 21:55:44] [32minfo[39m: POST /users - Successfully created user with ID: ago7b9m7b99r74fvwa9ffmi5
+[2025-10-24 21:56:05] [32minfo[39m: POST /users - Successfully created user with ID: gbu9wmg3jsfbxf7o2x1xvar1
+[2025-10-24 21:58:43] [32minfo[39m: DELETE /users/:id - Successfully deleted user with ID: ago7b9m7b99r74fvwa9ffmi5
+[2025-10-24 21:59:12] [32minfo[39m: POST /users - Successfully created user with ID: j4cpvybhzup10cnyqqktsqf3
+[2025-10-24 21:59:40] [32minfo[39m: PUT /users/:id - Successfully updated user with ID: j4cpvybhzup10cnyqqktsqf3
+[2025-10-24 21:59:49] [32minfo[39m: DELETE /users/:id - Successfully deleted user with ID: j4cpvybhzup10cnyqqktsqf3

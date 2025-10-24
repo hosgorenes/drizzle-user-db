@@ -21,7 +21,7 @@ export const usersEmails = sqliteTable("users_emails", {
         .$defaultFn(() => createId()),
     userId: text("user_id")
         .notNull()
-        .references(() => users.id),
+        .references(() => users.id, { onDelete: "cascade" }),
     email: text("email").notNull(),
     isPrimary: integer("is_primary", { mode: "boolean" })
         .default(false)

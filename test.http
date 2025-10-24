@@ -1,2 +1,118 @@
-DELETE http://localhost:3000/users/dkn2qjsch4k1vmwb8omkmf0k
+######################################
+# 🔑 1️⃣ API KEY - ANONYMOUS USER
+######################################
 
+### Get all users (should only see name fields)
+GET http://localhost:3000/users
+x-api-key: mysecretapikeydff
+Content-Type: application/json
+
+### Get specific user by ID (allowed - read only)
+GET http://localhost:3000/users/ago7b9m7b99r74fvwa9ffmi5
+x-api-key: mysecretapikeydff
+Content-Type: application/json
+
+### Try to create user (should fail - 403 Forbidden)
+POST http://localhost:3000/users
+x-api-key: mysecretapikeydff
+Content-Type: application/json
+
+{
+  "firstName": "Anon",
+  "lastName": "Test",
+  "city": "Izmir",
+  "emails": [
+    { "email": "anon@test.com", "isPrimary": true }
+  ]
+}
+
+
+######################################
+# 🧍 2️⃣ NORMAL USER - JWT
+######################################
+
+### Get all users (should work)
+GET http://localhost:3000/users
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJPbmxpbmUgSldUIEJ1aWxkZXIiLCJpYXQiOjE3NjEzMjQ5NDMsImV4cCI6MTc5Mjg2MDk3NywiYXVkIjoid3d3LmV4YW1wbGUuY29tIiwic3ViIjoiaGkiLCJmaXJzdE5hbWUiOiJlbmVzIiwibGFzdE5hbWUiOiJob3Nnb3IiLCJFbWFpbCI6ImVuZXNAZXhhbXBsZS5jb20iLCJyb2xlIjoidXNlciIsImlkIjoidXNlcjEyMyJ9.fpoUy_1Ab_3e0dpnp9nCajiu__aGpjoxojqnafjj8c4
+Content-Type: application/json
+
+### Get specific user by ID (allowed)
+GET http://localhost:3000/users/ago7b9m7b99r74fvwa9ffmi5
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJPbmxpbmUgSldUIEJ1aWxkZXIiLCJpYXQiOjE3NjEzMDY5OTksImV4cCI6MTc5Mjg0MzA1NCwiYXVkIjoiIiwic3ViIjoiZXJndW4iLCJmaXJzdE5hbWUiOiJlbmVzIiwiU3VybmFtZSI6Imhvc2dvciIsImVtYWlsIjoiZW5lc0BleGFtcGxlLmNvbSIsInJvbGUiOiJ1c2VyIiwiaWQiOiIyNSJ9.GCS4M3mmTPI5Qt-aWxruedz7890LlMcQ0x1G9tSzXsE
+Content-Type: application/json
+
+### Create user (should fail - 403)
+POST http://localhost:3000/users
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJPbmxpbmUgSldUIEJ1aWxkZXIiLCJpYXQiOjE3NjEzMDY5OTksImV4cCI6MTc5Mjg0MzA1NCwiYXVkIjoiIiwic3ViIjoiZXJndW4iLCJmaXJzdE5hbWUiOiJlbmVzIiwiU3VybmFtZSI6Imhvc2dvciIsImVtYWlsIjoiZW5lc0BleGFtcGxlLmNvbSIsInJvbGUiOiJ1c2VyIiwiaWQiOiIyNSJ9.GCS4M3mmTPI5Qt-aWxruedz7890LlMcQ0x1G9tSzXsE
+Content-Type: application/json
+
+{
+  "firstName": "UserCreated",
+  "lastName": "NotAllowed",
+  "city": "Izmir",
+  "emails": [
+    { "email": "usercreated@test.com", "isPrimary": true }
+  ]
+}
+
+### Update own user (should work if id == JWT.id)
+PUT http://localhost:3000/users/gbu9wmg3jsfbxf7o2x1xvar1
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJPbmxpbmUgSldUIEJ1aWxkZXIiLCJpYXQiOjE3NjEzMjQ5NDMsImV4cCI6MTc5Mjg2MDk3NywiYXVkIjoid3d3LmV4YW1wbGUuY29tIiwic3ViIjoiaGkiLCJmaXJzdE5hbWUiOiJlbmVzIiwibGFzdE5hbWUiOiJob3Nnb3IiLCJFbWFpbCI6ImVuZXNAZXhhbXBsZS5jb20iLCJyb2xlIjoidXNlciIsImlkIjoiYWdvN2I5bTdiOTlyNzRmdndhOWZmbWk1In0.yNfaE24w1G8nz4JwMco0ZbB6cdVfbrZBNFRO7Joo1bE
+Content-Type: application/json
+
+{
+  "firstName": "enes",
+  "lastName": "zafer ",
+  "city": "aydın",
+  "emails": [
+    { "email": "eneszafer@user.com", "isPrimary": true }
+  ]
+}
+
+### Delete another user (should fail - 403)
+DELETE http://localhost:3000/users/ago7b9m7b99r74fvwa9ffmi5
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJPbmxpbmUgSldUIEJ1aWxkZXIiLCJpYXQiOjE3NjEzMjQ5NDMsImV4cCI6MTc5Mjg2MDk3NywiYXVkIjoid3d3LmV4YW1wbGUuY29tIiwic3ViIjoiaGkiLCJmaXJzdE5hbWUiOiJlbmVzIiwibGFzdE5hbWUiOiJob3Nnb3IiLCJFbWFpbCI6ImVuZXNAZXhhbXBsZS5jb20iLCJyb2xlIjoidXNlciIsImlkIjoienpqbHhhaXYycHRrZjVkaGVrZG85d2wwIn0.hXXjfex61QZAG0AbUdEudb_2xdXfrYWH5_RpXcZibHc
+
+
+######################################
+# 👑 3️⃣ ADMIN - JWT
+######################################
+
+### Get all users (full access)
+GET http://localhost:3000/users
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJPbmxpbmUgSldUIEJ1aWxkZXIiLCJpYXQiOjE3NjEzMTAzNDQsImV4cCI6MTc5Mjg0NjQ4MCwiYXVkIjoid3d3LmV4YW1wbGUuY29tIiwic3ViIjoiaGkiLCJmaXJzdE5hbWUiOiJlbmVzIiwibGFzdE5hbWUiOiJSb2NrZXQiLCJFbWFpbCI6ImVuZXNAZXhhbXBsZS5jb20iLCJyb2xlIjoiYWRtaW4iLCJpZCI6ImFkbWluMTIzIn0.SoraC38rZkWAXFSKLnkG7AVXB5cKo1X0dKpUdXWc7fc
+Content-Type: application/json
+
+### Get user by ID (allowed)
+GET http://localhost:3000/users/fsyj9cfvg2u2tee0oyjaefdq
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJPbmxpbmUgSldUIEJ1aWxkZXIiLCJpYXQiOjE3NjEzMTAzNDQsImV4cCI6MTc5Mjg0NjQ4MCwiYXVkIjoid3d3LmV4YW1wbGUuY29tIiwic3ViIjoiaGkiLCJmaXJzdE5hbWUiOiJlbmVzIiwibGFzdE5hbWUiOiJSb2NrZXQiLCJFbWFpbCI6ImVuZXNAZXhhbXBsZS5jb20iLCJyb2xlIjoiYWRtaW4iLCJpZCI6ImFkbWluMTIzIn0.SoraC38rZkWAXFSKLnkG7AVXB5cKo1X0dKpUdXWc7fc
+Content-Type: application/json
+
+### Create new user (allowed)
+POST http://localhost:3000/users
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJPbmxpbmUgSldUIEJ1aWxkZXIiLCJpYXQiOjE3NjEzMTAzNDQsImV4cCI6MTc5Mjg0NjQ4MCwiYXVkIjoid3d3LmV4YW1wbGUuY29tIiwic3ViIjoiaGkiLCJmaXJzdE5hbWUiOiJlbmVzIiwibGFzdE5hbWUiOiJSb2NrZXQiLCJFbWFpbCI6ImVuZXNAZXhhbXBsZS5jb20iLCJyb2xlIjoiYWRtaW4iLCJpZCI6ImFkbWluMTIzIn0.SoraC38rZkWAXFSKLnkG7AVXB5cKo1X0dKpUdXWc7fc
+Content-Type: application/json
+
+{
+  "firstName": "enes ",
+  "lastName": "hosgor",
+  "city": "izmir",
+  "emails": [
+    { "email": "enes41hosgor@gmail.com", "isPrimary": true }
+  ]
+}
+
+### Update any user (allowed)
+PUT http://localhost:3000/users/vlzt542pkhriwwutg10nj7kc
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJPbmxpbmUgSldUIEJ1aWxkZXIiLCJpYXQiOjE3NjEzMTAzNDQsImV4cCI6MTc5Mjg0NjQ4MCwiYXVkIjoid3d3LmV4YW1wbGUuY29tIiwic3ViIjoiaGkiLCJmaXJzdE5hbWUiOiJlbmVzIiwibGFzdE5hbWUiOiJSb2NrZXQiLCJFbWFpbCI6ImVuZXNAZXhhbXBsZS5jb20iLCJyb2xlIjoiYWRtaW4iLCJpZCI6ImFkbWluMTIzIn0.SoraC38rZkWAXFSKLnkG7AVXB5cKo1X0dKpUdXWc7fc
+Content-Type: application/json
+
+{
+  "firstName": "UpdatedByAdmin",
+  "lastName": "Test",
+  "city": "Istanbul"
+}
+
+### Delete any user (allowed)
+DELETE http://localhost:3000/users/fsyj9cfvg2u2tee0oyjaefdq
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJPbmxpbmUgSldUIEJ1aWxkZXIiLCJpYXQiOjE3NjEzMTAzNDQsImV4cCI6MTc5Mjg0NjQ4MCwiYXVkIjoid3d3LmV4YW1wbGUuY29tIiwic3ViIjoiaGkiLCJmaXJzdE5hbWUiOiJlbmVzIiwibGFzdE5hbWUiOiJSb2NrZXQiLCJFbWFpbCI6ImVuZXNAZXhhbXBsZS5jb20iLCJyb2xlIjoiYWRtaW4iLCJpZCI6ImFkbWluMTIzIn0.SoraC38rZkWAXFSKLnkG7AVXB5cKo1X0dKpUdXWc7fc

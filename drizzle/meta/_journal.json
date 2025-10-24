@@ -15,6 +15,13 @@
       "when": 1760957801159,
       "tag": "0001_medical_rawhide_kid",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1761328320720,
+      "tag": "0002_long_deathbird",
+      "breakpoints": true
     }
   ]
 }

@@ -1,3 +1,37 @@
 [2025-10-22 11:50:52] [31merror[39m: GET /users - Error fetching users
 [2025-10-22 12:02:59] [31merror[39m: Server failed to start: listen EADDRINUSE: address already in use ::1:3000
 [2025-10-22 12:52:44] [31merror[39m: Server failed to start: listen EADDRINUSE: address already in use ::1:3000
+[2025-10-24 00:56:40] [31merror[39m: GET /users - Error fetching users
+[2025-10-24 00:56:54] [31merror[39m: GET /users - Error fetching users
+[2025-10-24 00:57:27] [31merror[39m: GET /users - Error fetching users
+[2025-10-24 00:58:12] [31merror[39m: GET /users - Error fetching users
+[2025-10-24 01:00:15] [31merror[39m: GET /users - Error fetching users
+[2025-10-24 15:39:34] [31merror[39m: Server failed to start: listen EADDRINUSE: address already in use ::1:3000
+[2025-10-24 15:48:47] [31merror[39m: PUT /users/:id - Error updating user
+[2025-10-24 15:51:50] [31merror[39m: PUT /users/:id - Error updating user
+[2025-10-24 15:51:52] [31merror[39m: PUT /users/:id - Error updating user
+[2025-10-24 19:54:58] [31merror[39m: Server failed to start: listen EADDRINUSE: address already in use ::1:3000
+[2025-10-24 20:04:48] [31merror[39m: PUT /users/:id - Error updating user
+[2025-10-24 20:04:50] [31merror[39m: PUT /users/:id - Error updating user
+[2025-10-24 20:06:18] [31merror[39m: PUT /users/:id - Error updating user
+[2025-10-24 20:43:27] [31merror[39m: DELETE /users/:id - Error deleting user
+[2025-10-24 20:52:54] [31merror[39m: DELETE /users/:id - Error deleting user
+[2025-10-24 20:54:13] [31merror[39m: DELETE /users/:id - Error deleting user
+[2025-10-24 20:54:36] [31merror[39m: DELETE /users/:id - Error deleting user
+[2025-10-24 20:55:41] [31merror[39m: DELETE /users/:id - Error deleting user
+[2025-10-24 20:56:42] [31merror[39m: DELETE /users/:id - Error deleting user
+[2025-10-24 20:57:19] [31merror[39m: DELETE /users/:id - Error deleting user
+[2025-10-24 20:57:37] [31merror[39m: DELETE /users/:id - Error deleting user
+[2025-10-24 21:01:08] [31merror[39m: DELETE /users/:id - Error deleting user
+[2025-10-24 21:03:48] [31merror[39m: PUT /users/:id - Error updating user
+[2025-10-24 21:12:11] [31merror[39m: PUT /users/:id - Error updating user
+[2025-10-24 21:25:21] [31merror[39m: DELETE /users/:id - Error deleting user
+[2025-10-24 21:27:06] [31merror[39m: GET /users - Error fetching users
+[2025-10-24 21:27:30] [31merror[39m: GET /users - Error fetching users
+[2025-10-24 21:27:45] [31merror[39m: GET /users - Error fetching users
+[2025-10-24 21:28:03] [31merror[39m: GET /users - Error fetching users
+[2025-10-24 21:28:20] [31merror[39m: GET /users - Error fetching users
+[2025-10-24 21:40:10] [31merror[39m: PUT /users/:id - Error updating user
+[2025-10-24 21:41:51] [31merror[39m: DELETE /users/:id - Error deleting user
+[2025-10-24 21:42:04] [31merror[39m: DELETE /users/:id - Error deleting user
+[2025-10-24 21:43:03] [31merror[39m: DELETE /users/:id - Error deleting user
