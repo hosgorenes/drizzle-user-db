@@ -8,7 +8,7 @@ import { paginationSchema, idSchema, UserSchema, UserUpdateSchema } from "../typ
 import { authenticationMiddleware } from "../middleware/authenticationMiddleware";
 import { requireReadUsers, requireUpdateUser, requireDeleteUser, requireCreateUser } from "../middleware/authorizationMiddleware";
 import "../types/fastify.d.ts";
-import { createUserAbilities } from "../utils/abilities.ts";
+import { createUserAbilities, getSelectableFields, canViewEmails } from "../utils/abilities";
 
 
 export default async function usersRoutes(app: FastifyInstance) {
@@ -19,39 +19,28 @@ export default async function usersRoutes(app: FastifyInstance) {
     try {
       const { limit, offset } = paginationSchema.parse(req.query);
 
-
-      if (req.user?.authType === "apiKey") {
-        const usersResult = await db
-          .select({
-            id: users.id,
-            firstName: users.firstName,
-            lastName: users.lastName,
-          })
-          .from(users)
-          .limit(limit)
-          .offset(offset)
-          .all();
-
-        return reply.send(usersResult);
+      const abilities = createUserAbilities(req.user);
+      if (!abilities.can('read', 'User')) {
+        return reply.code(403).send({ error: "Forbidden" });
       }
 
+      const selectableFields = getSelectableFields(req.user);
+
+      const selectObject = {};
+      selectableFields.forEach(field => {
+        selectObject[field] = users[field];
+      });
+
       const usersResult = await db
-        .select({
-          id: users.id,
-          firstName: users.firstName,
-          lastName: users.lastName,
-          city: users.city,
-          createdAt: users.createdAt,
-          updatedAt: users.updatedAt,
-        })
+        .select(selectObject)
         .from(users)
         .limit(limit)
         .offset(offset)
         .all();
 
-      if (req.user?.role === "admin") {
+      if (canViewEmails(req.user)) {
         const result = await Promise.all(
-          usersResult.map(async (user) => {
+          usersResult.map(async (user: any) => {
             const emails = await db
               .select({
                 email: usersEmails.email,
@@ -99,34 +88,20 @@ export default async function usersRoutes(app: FastifyInstance) {
     try {
       const { id: userId } = idSchema.parse(req.params);
 
-      if (req.user?.authType === "apiKey" || req.user?.role === "anonymous") {
-        const basicUser = await db
-          .select({
-            id: users.id,
-            firstName: users.firstName,
-            lastName: users.lastName,
-          })
-          .from(users)
-          .where(eq(users.id, userId))
-          .get();
-
-        if (!basicUser) {
-          logger.warn(`GET /users/:id - User not found with ID: ${userId}`);
-          return reply.code(404).send({ error: "User not found" });
-        }
-
-        return reply.send(basicUser);
+      const abilities = createUserAbilities(req.user);
+      if (!abilities.can('read', 'User')) {
+        return reply.code(403).send({ error: "Forbidden" });
       }
 
+      const selectableFields = getSelectableFields(req.user);
+
+      const selectObject = {};
+      selectableFields.forEach(field => {
+        selectObject[field] = users[field];
+      });
+
       const user = await db
-        .select({
-          id: users.id,
-          firstName: users.firstName,
-          lastName: users.lastName,
-          city: users.city,
-          createdAt: users.createdAt,
-          updatedAt: users.updatedAt,
-        })
+        .select(selectObject)
         .from(users)
         .where(eq(users.id, userId))
         .get();
@@ -136,16 +111,20 @@ export default async function usersRoutes(app: FastifyInstance) {
         return reply.code(404).send({ error: "User not found" });
       }
 
-      const emails = await db
-        .select({
-          email: usersEmails.email,
-          isPrimary: usersEmails.isPrimary,
-        })
-        .from(usersEmails)
-        .where(eq(usersEmails.userId, userId))
-        .all();
+      if (canViewEmails(req.user)) {
+        const emails = await db
+          .select({
+            email: usersEmails.email,
+            isPrimary: usersEmails.isPrimary,
+          })
+          .from(usersEmails)
+          .where(eq(usersEmails.userId, userId))
+          .all();
 
-      return reply.send({ ...user, emails });
+        return reply.send({ ...user, emails });
+      }
+
+      return reply.send(user);
 
     } catch (error) {
       if (error instanceof ZodError) {
@@ -207,10 +186,19 @@ export default async function usersRoutes(app: FastifyInstance) {
     }
   });
 
+  // ---- PUT /users/:id ----
   app.put("/:id", { preHandler: [requireUpdateUser] }, async (req, reply) => {
     try {
       const { id: userId } = idSchema.parse(req.params);
 
+      const abilities = createUserAbilities(req.user);
+      if (!abilities.can('update', 'User')) {
+        return reply.code(403).send({ error: "Forbidden" });
+      }
+
+      if (req.user?.role === "user" && req.user?.id !== userId) {
+        return reply.code(403).send({ error: "You can only update your own record" });
+      }
 
       const { firstName, lastName, city, emails } = UserUpdateSchema.parse(req.body);
 
@@ -230,19 +218,27 @@ export default async function usersRoutes(app: FastifyInstance) {
         return reply.code(404).send({ error: "User not found" });
       }
 
-      if (emails && Array.isArray(emails)) {
+      try {
         await db.transaction(async (tx) => {
           await tx.delete(usersEmails).where(eq(usersEmails.userId, userId)).run();
 
-          if (emails.length > 0) {
-            await tx.insert(usersEmails).values(
-              emails.map((e) => ({
-                userId,
-                email: e.email,
-                isPrimary: e.isPrimary ?? false,
-              }))
-            ).run();
+          if (emails && Array.isArray(emails) && emails.length > 0) {
+            await tx
+              .insert(usersEmails)
+              .values(
+                emails.map((e) => ({
+                  userId,
+                  email: e.email,
+                  isPrimary: e.isPrimary ?? false,
+                }))
+              )
+              .run();
           }
+        });
+      } catch (emailError) {
+        logger.error("PUT /users/:id - Error updating emails", {
+          error: (emailError as any).message,
+          userId,
         });
       }
 
@@ -257,7 +253,6 @@ export default async function usersRoutes(app: FastifyInstance) {
         message: "User updated successfully",
         user: { ...updated },
       });
-
     } catch (error) {
       if (error instanceof ZodError) {
         logger.warn("PUT /users/:id - Validation error", { error: error.format() });
@@ -281,9 +276,21 @@ export default async function usersRoutes(app: FastifyInstance) {
   });
 
 
+
+  // ---- DELETE /users/:id ----
   app.delete("/:id", { preHandler: [requireDeleteUser] }, async (req, reply) => {
     try {
       const { id: userId } = idSchema.parse(req.params);
+
+      const abilities = createUserAbilities(req.user);
+      if (!abilities.can('delete', 'User')) {
+        return reply.code(403).send({ error: "Forbidden" });
+      }
+
+      if (req.user?.role === 'user' && req.user?.id !== userId) {
+        return reply.code(403).send({ error: "You can only delete your own record" });
+      }
+
 
       await db.delete(usersEmails).where(eq(usersEmails.userId, userId)).run();
 

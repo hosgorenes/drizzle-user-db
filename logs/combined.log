@@ -125,3 +125,46 @@
 [2025-10-24 21:59:12] [32minfo[39m: POST /users - Successfully created user with ID: j4cpvybhzup10cnyqqktsqf3
 [2025-10-24 21:59:40] [32minfo[39m: PUT /users/:id - Successfully updated user with ID: j4cpvybhzup10cnyqqktsqf3
 [2025-10-24 21:59:49] [32minfo[39m: DELETE /users/:id - Successfully deleted user with ID: j4cpvybhzup10cnyqqktsqf3
+[2025-10-25 17:47:17] [32minfo[39m: 🚀 Server running at http://[::1]:3000
+[2025-10-25 18:04:27] [32minfo[39m: 🚀 Server running at http://[::1]:3000
+[2025-10-25 18:07:42] [32minfo[39m: POST /users - Successfully created user with ID: q6l52ot4pfkihyh3372mw3q9
+[2025-10-25 18:08:14] [31merror[39m: PUT /users/:id - Error updating user
+[2025-10-25 18:08:23] [31merror[39m: PUT /users/:id - Error updating user
+[2025-10-25 18:09:48] [32minfo[39m: DELETE /users/:id - Successfully deleted user with ID: q6l52ot4pfkihyh3372mw3q9
+[2025-10-25 18:09:57] [32minfo[39m: DELETE /users/:id - Successfully deleted user with ID: gbu9wmg3jsfbxf7o2x1xvar1
+[2025-10-25 18:10:02] [32minfo[39m: POST /users - Successfully created user with ID: t7hhq5ccxj8qylugh2825e9a
+[2025-10-25 18:10:16] [32minfo[39m: POST /users - Successfully created user with ID: omo3o8l2n39l6k7mvyxlqb54
+[2025-10-25 18:11:03] [31merror[39m: PUT /users/:id - Error updating user
+[2025-10-25 18:13:43] [32minfo[39m: 🚀 Server running at http://[::1]:3000
+[2025-10-25 18:14:20] [31merror[39m: PUT /users/:id - Error updating emails
+[2025-10-25 18:14:20] [32minfo[39m: PUT /users/:id - Successfully updated user with ID: t7hhq5ccxj8qylugh2825e9a
+[2025-10-25 18:15:51] [31merror[39m: PUT /users/:id - Error updating emails
+[2025-10-25 18:15:51] [32minfo[39m: PUT /users/:id - Successfully updated user with ID: t7hhq5ccxj8qylugh2825e9a
+[2025-10-25 18:17:24] [32minfo[39m: 🚀 Server running at http://[::1]:3000
+[2025-10-25 18:17:56] [31merror[39m: PUT /users/:id - Error updating emails
+[2025-10-25 18:17:56] [32minfo[39m: PUT /users/:id - Successfully updated user with ID: t7hhq5ccxj8qylugh2825e9a
+[2025-10-25 18:18:14] [32minfo[39m: DELETE /users/:id - Successfully deleted user with ID: t7hhq5ccxj8qylugh2825e9a
+[2025-10-25 18:18:33] [32minfo[39m: POST /users - Successfully created user with ID: owfbqex8h42xzbjxk6paxz0x
+[2025-10-25 18:20:30] [32minfo[39m: DELETE /users/:id - Successfully deleted user with ID: omo3o8l2n39l6k7mvyxlqb54
+[2025-10-25 18:30:25] [32minfo[39m: POST /users - Successfully created user with ID: tmevz9rf0wdr9yrh01wgojmy
+[2025-10-25 18:30:57] [31merror[39m: PUT /users/:id - Error updating emails
+[2025-10-25 18:30:57] [32minfo[39m: PUT /users/:id - Successfully updated user with ID: tmevz9rf0wdr9yrh01wgojmy
+[2025-10-25 18:33:33] [32minfo[39m: 🚀 Server running at http://[::1]:3000
+[2025-10-25 18:33:58] [32minfo[39m: DELETE /users/:id - Successfully deleted user with ID: tmevz9rf0wdr9yrh01wgojmy
+[2025-10-25 18:34:55] [32minfo[39m: 🚀 Server running at http://[::1]:3000
+[2025-10-25 18:35:05] [32minfo[39m: POST /users - Successfully created user with ID: s59vk6nlhbyccg0ewgmb05qn
+[2025-10-25 18:45:51] [32minfo[39m: 🚀 Server running at http://[::1]:3000
+[2025-10-25 18:46:03] [32minfo[39m: POST /users - Successfully created user with ID: leuecgixyl8i7z4pa6wso3zl
+[2025-10-25 18:46:17] [31merror[39m: DELETE /users/:id - Error deleting user
+[2025-10-25 18:46:38] [31merror[39m: DELETE /users/:id - Error deleting user
+[2025-10-25 18:48:47] [31merror[39m: DELETE /users/:id - Error deleting user
+[2025-10-25 18:54:27] [32minfo[39m: 🚀 Server running at http://[::1]:3000
+[2025-10-25 18:55:02] [33mwarn[39m: GET /users/:id - User not found with ID: tmevz9rf0wdr9yrh01wgojmy
+[2025-10-25 18:56:04] [31merror[39m: PUT /users/:id - Error updating user
+[2025-10-25 18:56:12] [31merror[39m: DELETE /users/:id - Error deleting user
+[2025-10-25 18:57:53] [32minfo[39m: 🚀 Server running at http://[::1]:3000
+[2025-10-25 18:58:12] [32minfo[39m: DELETE /users/:id - Successfully deleted user with ID: leuecgixyl8i7z4pa6wso3zl
+[2025-10-25 18:58:32] [31merror[39m: PUT /users/:id - Error updating emails
+[2025-10-25 18:58:32] [32minfo[39m: PUT /users/:id - Successfully updated user with ID: s59vk6nlhbyccg0ewgmb05qn
+[2025-10-25 18:59:24] [31merror[39m: PUT /users/:id - Error updating emails
+[2025-10-25 18:59:24] [32minfo[39m: PUT /users/:id - Successfully updated user with ID: owfbqex8h42xzbjxk6paxz0x

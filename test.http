@@ -8,7 +8,7 @@ x-api-key: mysecretapikeydff
 Content-Type: application/json
 
 ### Get specific user by ID (allowed - read only)
-GET http://localhost:3000/users/ago7b9m7b99r74fvwa9ffmi5
+GET http://localhost:3000/users/owfbqex8h42xzbjxk6paxz0x
 x-api-key: mysecretapikeydff
 Content-Type: application/json
 
@@ -37,7 +37,7 @@ Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJPbmxpbmUgS
 Content-Type: application/json
 
 ### Get specific user by ID (allowed)
-GET http://localhost:3000/users/ago7b9m7b99r74fvwa9ffmi5
+GET http://localhost:3000/users/omo3o8l2n39l6k7mvyxlqb54
 Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJPbmxpbmUgSldUIEJ1aWxkZXIiLCJpYXQiOjE3NjEzMDY5OTksImV4cCI6MTc5Mjg0MzA1NCwiYXVkIjoiIiwic3ViIjoiZXJndW4iLCJmaXJzdE5hbWUiOiJlbmVzIiwiU3VybmFtZSI6Imhvc2dvciIsImVtYWlsIjoiZW5lc0BleGFtcGxlLmNvbSIsInJvbGUiOiJ1c2VyIiwiaWQiOiIyNSJ9.GCS4M3mmTPI5Qt-aWxruedz7890LlMcQ0x1G9tSzXsE
 Content-Type: application/json
 
@@ -56,22 +56,22 @@ Content-Type: application/json
 }
 
 ### Update own user (should work if id == JWT.id)
-PUT http://localhost:3000/users/gbu9wmg3jsfbxf7o2x1xvar1
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJPbmxpbmUgSldUIEJ1aWxkZXIiLCJpYXQiOjE3NjEzMjQ5NDMsImV4cCI6MTc5Mjg2MDk3NywiYXVkIjoid3d3LmV4YW1wbGUuY29tIiwic3ViIjoiaGkiLCJmaXJzdE5hbWUiOiJlbmVzIiwibGFzdE5hbWUiOiJob3Nnb3IiLCJFbWFpbCI6ImVuZXNAZXhhbXBsZS5jb20iLCJyb2xlIjoidXNlciIsImlkIjoiYWdvN2I5bTdiOTlyNzRmdndhOWZmbWk1In0.yNfaE24w1G8nz4JwMco0ZbB6cdVfbrZBNFRO7Joo1bE
+PUT http://localhost:3000/users/owfbqex8h42xzbjxk6paxz0x
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJPbmxpbmUgSldUIEJ1aWxkZXIiLCJpYXQiOjE3NjEzOTY4OTMsImV4cCI6MTc5MjkzMjg5MywiYXVkIjoid3d3LmV4YW1wbGUuY29tIiwic3ViIjoianJvY2tldEBleGFtcGxlLmNvbSIsInJvbGUiOiJ1c2VyIiwiaWQiOiJvd2ZicWV4OGg0Mnh6Ymp4azZwYXh6MHgifQ.mE75DyIWcQ6Su0K-KlhVmh7uoHCWugS8-sjQM1EQYkk
 Content-Type: application/json
 
 {
-  "firstName": "enes",
-  "lastName": "zafer ",
-  "city": "aydın",
+  "firstName": "Cem",
+  "lastName": "gurkas ",
+  "city": "aydin",
   "emails": [
-    { "email": "eneszafer@user.com", "isPrimary": true }
+    { "email": "cemgurkas@example.com", "isPrimary": false }
   ]
 }
 
 ### Delete another user (should fail - 403)
-DELETE http://localhost:3000/users/ago7b9m7b99r74fvwa9ffmi5
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJPbmxpbmUgSldUIEJ1aWxkZXIiLCJpYXQiOjE3NjEzMjQ5NDMsImV4cCI6MTc5Mjg2MDk3NywiYXVkIjoid3d3LmV4YW1wbGUuY29tIiwic3ViIjoiaGkiLCJmaXJzdE5hbWUiOiJlbmVzIiwibGFzdE5hbWUiOiJob3Nnb3IiLCJFbWFpbCI6ImVuZXNAZXhhbXBsZS5jb20iLCJyb2xlIjoidXNlciIsImlkIjoienpqbHhhaXYycHRrZjVkaGVrZG85d2wwIn0.hXXjfex61QZAG0AbUdEudb_2xdXfrYWH5_RpXcZibHc
+DELETE http://localhost:3000/users/s59vk6nlhbyccg0ewgmb05qn
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJPbmxpbmUgSldUIEJ1aWxkZXIiLCJpYXQiOjE3NjEzOTY4OTMsImV4cCI6MTc5MjkzMjg5MywiYXVkIjoid3d3LmV4YW1wbGUuY29tIiwic3ViIjoianJvY2tldEBleGFtcGxlLmNvbSIsInJvbGUiOiJ1c2VyIiwiaWQiOiJvbW8zbzhsMm4zOWw2azdtdnl4bHFiNTQifQ.7XGJTGFJqtjl_Tc4HTS9VhEvJSiF11BqcMTBcYgN3ww
 
 
 ######################################
@@ -84,7 +84,7 @@ Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJPbmxpbmUgS
 Content-Type: application/json
 
 ### Get user by ID (allowed)
-GET http://localhost:3000/users/fsyj9cfvg2u2tee0oyjaefdq
+GET http://localhost:3000/users/leuecgixyl8i7z4pa6wso3zl
 Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJPbmxpbmUgSldUIEJ1aWxkZXIiLCJpYXQiOjE3NjEzMTAzNDQsImV4cCI6MTc5Mjg0NjQ4MCwiYXVkIjoid3d3LmV4YW1wbGUuY29tIiwic3ViIjoiaGkiLCJmaXJzdE5hbWUiOiJlbmVzIiwibGFzdE5hbWUiOiJSb2NrZXQiLCJFbWFpbCI6ImVuZXNAZXhhbXBsZS5jb20iLCJyb2xlIjoiYWRtaW4iLCJpZCI6ImFkbWluMTIzIn0.SoraC38rZkWAXFSKLnkG7AVXB5cKo1X0dKpUdXWc7fc
 Content-Type: application/json
 
@@ -94,25 +94,27 @@ Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJPbmxpbmUgS
 Content-Type: application/json
 
 {
-  "firstName": "enes ",
-  "lastName": "hosgor",
-  "city": "izmir",
+  "firstName": "salih ",
+  "lastName": "iscibasi",
+  "city": "aydin",
   "emails": [
-    { "email": "enes41hosgor@gmail.com", "isPrimary": true }
+    { "email": "salihiscibasi@test.com", "isPrimary": true }
   ]
 }
 
 ### Update any user (allowed)
-PUT http://localhost:3000/users/vlzt542pkhriwwutg10nj7kc
+PUT http://localhost:3000/users/s59vk6nlhbyccg0ewgmb05qn
 Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJPbmxpbmUgSldUIEJ1aWxkZXIiLCJpYXQiOjE3NjEzMTAzNDQsImV4cCI6MTc5Mjg0NjQ4MCwiYXVkIjoid3d3LmV4YW1wbGUuY29tIiwic3ViIjoiaGkiLCJmaXJzdE5hbWUiOiJlbmVzIiwibGFzdE5hbWUiOiJSb2NrZXQiLCJFbWFpbCI6ImVuZXNAZXhhbXBsZS5jb20iLCJyb2xlIjoiYWRtaW4iLCJpZCI6ImFkbWluMTIzIn0.SoraC38rZkWAXFSKLnkG7AVXB5cKo1X0dKpUdXWc7fc
 Content-Type: application/json
 
 {
-  "firstName": "UpdatedByAdmin",
-  "lastName": "Test",
-  "city": "Istanbul"
+  "lastName": "aslan",
+  "city": "aksaray",
+  "emails": [
+    { "email": "salihaksaray@test.com", "isPrimary": false }
+  ]
 }
 
 ### Delete any user (allowed)
-DELETE http://localhost:3000/users/fsyj9cfvg2u2tee0oyjaefdq
+DELETE http://localhost:3000/users/leuecgixyl8i7z4pa6wso3zl
 Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJPbmxpbmUgSldUIEJ1aWxkZXIiLCJpYXQiOjE3NjEzMTAzNDQsImV4cCI6MTc5Mjg0NjQ4MCwiYXVkIjoid3d3LmV4YW1wbGUuY29tIiwic3ViIjoiaGkiLCJmaXJzdE5hbWUiOiJlbmVzIiwibGFzdE5hbWUiOiJSb2NrZXQiLCJFbWFpbCI6ImVuZXNAZXhhbXBsZS5jb20iLCJyb2xlIjoiYWRtaW4iLCJpZCI6ImFkbWluMTIzIn0.SoraC38rZkWAXFSKLnkG7AVXB5cKo1X0dKpUdXWc7fc

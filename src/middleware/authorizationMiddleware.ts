@@ -13,7 +13,6 @@ export function requirePermission(action: string, subject: string) {
 
             const abilities = createUserAbilities(req.user);
 
-            //If there is a parameter (e.g. /users/:id) pass it to CASL
             const entity = (req.params as any)?.id ? { id: (req.params as any).id } : undefined;
 
             if (!abilities.can(action as Actions, subject as Subjects)) {
@@ -23,7 +22,6 @@ export function requirePermission(action: string, subject: string) {
                 });
             }
 
-            // Permission granted, continue
             return;
 
         } catch (error) {
@@ -36,7 +34,6 @@ export function requirePermission(action: string, subject: string) {
 }
 
 
-// Specific permission checkers
 export const requireReadUsers = requirePermission('read', 'User');
 export const requireUpdateUser = requirePermission('update', 'User');
 export const requireDeleteUser = requirePermission('delete', 'User');
