@@ -4,3 +4,4 @@ node_modules/
 *.db
 *.local.sqlite
 test.http
+logs/

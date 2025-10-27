@@ -3,4 +3,3 @@ node_modules/
 *.sqlite
 *.db
 *.local.sqlite
-logs/
