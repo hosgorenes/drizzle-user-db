@@ -2,3 +2,15 @@
 [2025-10-27 10:24:02] [32minfo[39m: 🚀 Server running at http://[::1]:3000
 [2025-10-27 10:24:48] [32minfo[39m: POST /users - Successfully created user with ID: fhx7053k9i9jfr7m18qb10ve
 [2025-10-27 10:25:00] [33mwarn[39m: GET /users/:id - User not found with ID: owfbqex8h42xzbjxk6paxz0x
+[2025-10-27 10:33:49] [32minfo[39m: 🚀 Server running at http://[::1]:3000
+[2025-10-27 10:34:24] [32minfo[39m: 🚀 Server running at http://[::1]:3000
+[2025-10-27 10:34:39] [31merror[39m: Server failed to start: listen EADDRINUSE: address already in use ::1:3000
+[2025-10-27 12:06:17] [32minfo[39m: 🚀 Server running at http://[::1]:3000
+[2025-10-27 14:07:49] [33mwarn[39m: POST /users - Validation error
+[2025-10-27 14:09:22] [32minfo[39m: POST /users - Successfully created user with ID: k1mwjjc8vv1vuon7tqvx4vre
+[2025-10-27 14:16:33] [32minfo[39m: POST /users - Successfully created user with ID: sl92s100kmh75qo3ttbnh53k
+[2025-10-27 14:16:56] [32minfo[39m: POST /users - Successfully created user with ID: j10jlvdirjcv70uys8l95o9q
+[2025-10-27 14:19:49] [32minfo[39m: POST /users - Successfully created user with ID: md925idjzgwnqgxamazhxnbr
+[2025-10-27 14:21:55] [31merror[39m: PUT /users/:id - Error updating emails
+[2025-10-27 14:21:55] [32minfo[39m: PUT /users/:id - Successfully updated user with ID: md925idjzgwnqgxamazhxnbr
+[2025-10-27 14:35:20] [32minfo[39m: DELETE /users/:id - Successfully deleted user with ID: md925idjzgwnqgxamazhxnbr
