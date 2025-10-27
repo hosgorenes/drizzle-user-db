@@ -1,0 +1,4 @@
+[2025-10-27 10:15:03] [32minfo[39m: 🚀 Server running at http://[::1]:3000
+[2025-10-27 10:24:02] [32minfo[39m: 🚀 Server running at http://[::1]:3000
+[2025-10-27 10:24:48] [32minfo[39m: POST /users - Successfully created user with ID: fhx7053k9i9jfr7m18qb10ve
+[2025-10-27 10:25:00] [33mwarn[39m: GET /users/:id - User not found with ID: owfbqex8h42xzbjxk6paxz0x
