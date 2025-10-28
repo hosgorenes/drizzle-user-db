@@ -1,0 +1,31 @@
+{
+    "name": "api",
+    "version": "1.0.0",
+    "private": true,
+    "main": "src/index.ts",
+    "scripts": {
+        "dev": "tsx src/index.ts",
+        "drizzle:generate": "drizzle-kit generate --config=drizzle-config.ts",
+        "drizzle:push": "drizzle-kit push --config=drizzle-config.ts",
+        "drizzle:studio": "drizzle-kit studio --config=drizzle-config.ts"
+    },
+    "dependencies": {
+        "@casl/ability": "^6.7.3",
+        "@paralleldrive/cuid2": "^3.1.0",
+        "better-sqlite3": "^12.4.1",
+        "drizzle-orm": "^0.44.6",
+        "fastify": "^5.6.1",
+        "jsonwebtoken": "^9.0.2",
+        "winston": "^3.18.3",
+        "zod": "^4.1.12",
+        "dotenv": "^17.2.3"
+    },
+    "devDependencies": {
+        "@types/better-sqlite3": "^7.6.13",
+        "@types/jsonwebtoken": "^9.0.10",
+        "@types/node": "^24.8.1",
+        "drizzle-kit": "^0.31.5",
+        "tsx": "^4.20.6",
+        "typescript": "^5.9.3"
+    }
+}
